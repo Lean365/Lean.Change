@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root>
+	<FTP>
+		<ServInfo ServName="ftp.teac.com.cn" ServIpaddr="192.168.16.244"/>
+		<UserInfo Uid="dtos" Pwd="xF3rcAbp"/>
+	</FTP>
+	<Send>
+		<TO Mail="luke@teac.com.cn" Name="DTA 技术课 胡木儿 副课长"/>
+		<CC Mail="engdoc@teac.com.cn" Name="DTA 技术部 文员"/>
+		<FR Mail="itsup@teac.com.cn" Name="设变DB系统" Pwd="ydD86nVc"/>
+		<SU Subject="[设变DB系统] 新设变请及时处理"/>
+	</Send>
+	<SendtoList>
+		<From Mail="ecnote@teac.com.cn" Pwd="0otG1wQk" Name="DTA 技术部 文管中心"/>
+		<ENG Mail="luke@teac.com.cn,hwei@teac.com.cn,liyj@teac.com.cn,jian.he@teac.com.cn,pengshengfu@teac.com.cn" />
+	</SendtoList>
+</Root>
