@@ -2,7 +2,7 @@
 <Root>
 	<FTP>
 		<ServInfo ServName="ftp2.teac.co.jp/DTA_ec/" ServIpaddr="172.20.233.40/DTA_ec/"/>
-		<UserInfo Uid="dta_ftp" Pwd="JDZDx5cb"/>
+		<UserInfo Uid="dta_ftp" Pwd="cGYwwoV3"/>
 	</FTP>
 	<Send>
 		<TO Mail="davische@teac.com.cn" Name="电脑课 程建红"/>

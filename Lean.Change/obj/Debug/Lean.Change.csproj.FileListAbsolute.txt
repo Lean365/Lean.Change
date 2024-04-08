@@ -1,5 +1,4 @@
 G:\App Develop\VS2023\Lean.Change\Lean.Change\obj\Debug\Lean.Change.csproj.AssemblyReference.cache
-G:\App Develop\VS2023\Lean.Change\Lean.Change\obj\Debug\Lean.Change.csproj.SuggestedBindingRedirects.cache
 G:\App Develop\VS2023\Lean.Change\Lean.Change\obj\Debug\Lean.Change.ChangeMain.resources
 G:\App Develop\VS2023\Lean.Change\Lean.Change\obj\Debug\Lean.Change.Properties.Resources.resources
 G:\App Develop\VS2023\Lean.Change\Lean.Change\obj\Debug\Lean.Change.csproj.GenerateResource.cache
