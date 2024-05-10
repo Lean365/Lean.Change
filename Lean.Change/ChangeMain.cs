@@ -597,6 +597,7 @@ namespace Lean.Change
 
                     for (int f = 0; f < comms; f++)
                     {
+                        //UpdateLot = dds.Tables[0].Rows[i][3].ToString();
                         str = str + dds.Tables[0].Rows[i][f].ToString() + "\',\'";
                     }
                     str = "'" + Guid.NewGuid() + "'," + str + "App自动添加'," + 0 + ",'admin','" + DateTime.Now + "','admin','" + DateTime.Now + "'";
@@ -607,17 +608,30 @@ namespace Lean.Change
                     str = "\'";
                 }
                 //存在就更新
+
                 string UpdateSql = "  UPDATE  [PP_SapOrders] " +
-                                    " SET[D_SAP_COOIS_C004] =[PP_SapOrders_TEMP].[D_SAP_COOIS_C004], " +
-                                    " [D_SAP_COOIS_C005]=[PP_SapOrders_TEMP].[D_SAP_COOIS_C005], " +
-                                    " [D_SAP_COOIS_C006]=[PP_SapOrders_TEMP].[D_SAP_COOIS_C006], " +
-                                    " [D_SAP_COOIS_C007]=[PP_SapOrders_TEMP].[D_SAP_COOIS_C007], " +
-                                    " [D_SAP_COOIS_C008]=[PP_SapOrders_TEMP].[D_SAP_COOIS_C008] " +
-                                    " ,Modifier ='Day_Update',ModifyTime=(select CONVERT(varchar, GETDATE(),120)) " +
-                                    " FROM[PP_SapOrders] inner join[PP_SapOrders_TEMP] " +
-                                    " ON[PP_SapOrders_TEMP].[D_SAP_COOIS_C002]=[PP_SapOrders].[D_SAP_COOIS_C002] " +
-                                    " WHERE [PP_SapOrders_TEMP].[D_SAP_COOIS_C001]='C100'";
+                //" SET[D_SAP_COOIS_C004] =[PP_SapOrders_TEMP].[D_SAP_COOIS_C004], " +
+                " SET [D_SAP_COOIS_C005]=[PP_SapOrders_TEMP].[D_SAP_COOIS_C005], " +
+                " [D_SAP_COOIS_C006]=[PP_SapOrders_TEMP].[D_SAP_COOIS_C006], " +
+                " [D_SAP_COOIS_C007]=[PP_SapOrders_TEMP].[D_SAP_COOIS_C007], " +
+                " [D_SAP_COOIS_C008]=[PP_SapOrders_TEMP].[D_SAP_COOIS_C008] " +
+                " ,Modifier ='Day_Update',ModifyTime=(select CONVERT(varchar, GETDATE(),120)) " +
+                " FROM[PP_SapOrders] inner join[PP_SapOrders_TEMP] " +
+                " ON[PP_SapOrders_TEMP].[D_SAP_COOIS_C002]=[PP_SapOrders].[D_SAP_COOIS_C002] " +
+                " WHERE [PP_SapOrders_TEMP].[D_SAP_COOIS_C001]='C100' and [PP_SapOrders_TEMP].[D_SAP_COOIS_C004]=''";
                 Helper_Sql.ExecuteNonQuery(UpdateSql);
+
+                string UpdateSqls = "  UPDATE  [PP_SapOrders] " +
+                " SET[D_SAP_COOIS_C004] =[PP_SapOrders_TEMP].[D_SAP_COOIS_C004], " +
+                " [D_SAP_COOIS_C005]=[PP_SapOrders_TEMP].[D_SAP_COOIS_C005], " +
+                " [D_SAP_COOIS_C006]=[PP_SapOrders_TEMP].[D_SAP_COOIS_C006], " +
+                " [D_SAP_COOIS_C007]=[PP_SapOrders_TEMP].[D_SAP_COOIS_C007], " +
+                " [D_SAP_COOIS_C008]=[PP_SapOrders_TEMP].[D_SAP_COOIS_C008] " +
+                " ,Modifier ='Day_Update',ModifyTime=(select CONVERT(varchar, GETDATE(),120)) " +
+                " FROM[PP_SapOrders] inner join[PP_SapOrders_TEMP] " +
+                " ON[PP_SapOrders_TEMP].[D_SAP_COOIS_C002]=[PP_SapOrders].[D_SAP_COOIS_C002] " +
+                " WHERE [PP_SapOrders_TEMP].[D_SAP_COOIS_C001]='C100' and [PP_SapOrders_TEMP].[D_SAP_COOIS_C004]<>''";
+                Helper_Sql.ExecuteNonQuery(UpdateSqls);
 
                 //不存在就新增
                 string InsertSql = "SELECT NEWID() [GUID] " +

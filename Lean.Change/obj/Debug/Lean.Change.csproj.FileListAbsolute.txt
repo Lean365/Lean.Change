@@ -21,6 +21,6 @@ G:\App Develop\VS2023\Lean.Change\Lean.Change\bin\Debug\System.Configuration.Con
 G:\App Develop\VS2023\Lean.Change\Lean.Change\bin\Debug\System.Security.AccessControl.xml
 G:\App Develop\VS2023\Lean.Change\Lean.Change\bin\Debug\System.Security.Permissions.xml
 G:\App Develop\VS2023\Lean.Change\Lean.Change\bin\Debug\System.Security.Principal.Windows.xml
-G:\App Develop\VS2023\Lean.Change\Lean.Change\obj\Debug\Lean.Change.csproj.CopyComplete
 G:\App Develop\VS2023\Lean.Change\Lean.Change\obj\Debug\Lean.Change.exe
 G:\App Develop\VS2023\Lean.Change\Lean.Change\obj\Debug\Lean.Change.pdb
+G:\App Develop\VS2023\Lean.Change\Lean.Change\obj\Debug\Lean.Cha.5DE904E2.Up2Date
